@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{color-scheme:light}
+body{background:#F7F8F5;color:#252D2A;font-family:var(--font-inter),sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-manrope),sans-serif;color:#163D35;letter-spacing:-0.01em}
+@layer components{
+  .btn{@apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed}
+  .btn-primary{@apply btn bg-emerald text-white hover:bg-[#1f6f5a]}
+  .btn-secondary{@apply btn border border-line bg-white text-forest hover:bg-mint}
+  .btn-danger{@apply btn bg-danger text-white hover:opacity-90}
+  .btn-ghost{@apply btn text-forest hover:bg-mint}
+  .card{@apply rounded-2xl border border-line bg-white shadow-card}
+  .input{@apply w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-charcoal placeholder:text-[#8a958f] focus:border-emerald focus:outline-none focus:ring-2 focus:ring-emerald/25}
+  .label{@apply mb-1.5 block text-sm font-medium text-charcoal}
+  .badge{@apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold}
+  .container-x{@apply mx-auto w-full max-w-6xl px-5 sm:px-8}
+  .th{@apply whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-muted}
+  .td{@apply px-4 py-3 text-sm align-middle}
+}
